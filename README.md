@@ -3,7 +3,7 @@ About responses
 
 Home: https://github.com/getsentry/responses
 
-Package license: Apache 2.0
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/responses-feedstock/blob/master/LICENSE.txt)
 
