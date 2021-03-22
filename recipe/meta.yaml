@@ -12,25 +12,30 @@ source:
 build:
   number: 0
   noarch: python
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv '
+  script: '{{ PYTHON }} -m pip install . -vv'
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
     - cookies
-    - python
+    - python >=3.6
     - requests >=2.0
     - six
+    - urllib3 >=1.25.10
 
 test:
   imports:
     - responses
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/getsentry/responses
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: A utility library for mocking out the `requests` Python library.
