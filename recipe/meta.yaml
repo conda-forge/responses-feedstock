@@ -19,7 +19,6 @@ requirements:
     - python >=3.6
     - pip
   run:
-    - cookies
     - python >=3.6
     - requests >=2.0
     - six
