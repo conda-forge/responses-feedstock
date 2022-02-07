@@ -10,18 +10,17 @@ source:
   sha256: 380cad4c1c1dc942e5e8a8eaae0b4d4edf708f4f010db8b7bcfafad1fcd254ff
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
   run:
-    - python >=3.6
-    - requests >=2.0
-    - six
+    - python >=3.7
+    - requests >=2.0,<3.0
     - urllib3 >=1.25.10
 
 test:
