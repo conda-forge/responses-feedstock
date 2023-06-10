@@ -1,5 +1,5 @@
 {% set name = "responses" %}
-{% set version = "0.21.0" %}
+{% set version = "0.23.1" %}
 
 package:
   name: {{ name|lower }}
@@ -19,10 +19,12 @@ requirements:
     - python >=3.7
     - pip
   run:
+    - pyyaml
     - python >=3.7
-    - requests >=2.0,<3.0
+    - requests >=2.22.0,<3.0
+    - types-pyyaml
+    - typing_extensions
     - urllib3 >=1.25.10
-
 test:
   imports:
     - responses
@@ -40,4 +42,5 @@ about:
 
 extra:
   recipe-maintainers:
+    - thewchan
     - mariusvniekerk
