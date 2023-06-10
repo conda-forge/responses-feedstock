@@ -1,11 +1,11 @@
-About responses
-===============
+About responses-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/responses-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/getsentry/responses
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/responses-feedstock/blob/main/LICENSE.txt)
 
 Summary: A utility library for mocking out the `requests` Python library.
 
@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
+* [@thewchan](https://github.com/thewchan/)
 
