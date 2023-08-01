@@ -1,5 +1,5 @@
 {% set name = "responses" %}
-{% set version = "0.23.2" %}
+{% set version = "0.23.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d5a2ce3285f84e1f107d2e942476b6c7dff3747f289c0eae997cb77d2ab68e8
+  sha256: 205029e1cb334c21cb4ec64fc7599be48b859a0fd381a42443cdd600bfe8b16a
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -24,7 +24,7 @@ requirements:
     - requests >=2.30.0,<3.0
     - types-pyyaml
     - typing_extensions
-    - urllib3 >=2.0.0,<3.0
+    - urllib3 >=1.25.10,<3.0
 test:
   imports:
     - responses
