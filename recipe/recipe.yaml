@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: responses
-  version: "0.26.1"
+  version: 0.26.2
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 2eb3218553cc8f79b57d257bac23af5e1bf381f5b9390b1767816f0843e01dc2
+  sha256: 9c9259b46a8349197edebf43cfa68a87e1a2802ef503ff8b2fecbabc0b45afd8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -26,10 +26,7 @@ requirements:
     - pyyaml
     - python >=${{ python_min }}
     - requests >=2.30.0,<3.0
-    - types-pyyaml
-    - typing_extensions
     - urllib3 >=1.25.10,<3.0
-
 tests:
   - python:
       imports:
@@ -37,7 +34,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
 
 about:
   license: Apache-2.0
